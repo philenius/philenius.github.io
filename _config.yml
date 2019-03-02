@@ -17,11 +17,11 @@ title: Adventures of a Software Engineer
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
   Hey, my name is Phil and I work as a Big Data Software Engineer. 
-  On this blog, I want to share solutions for problems that I came
-  across on my daily work.
+  On this blog, I want to share with you my solutions to problems
+  that I came across on my daily work.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: 
+url: "https://philenius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username:
 github_username:  philenius
 
 # Build settings
