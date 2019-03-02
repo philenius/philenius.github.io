@@ -9,11 +9,11 @@ a.post-link:hover, a.site-title:hover {
 	color: #607d8b;
 }
 a.post-link {
-	color: #29353c;
+	color: #29353c !important;
 }
 .site-header {
-	border-top-color: #607d8b;
+	border-top-color: #607d8b !important;
 }
 code {
-	background-color: #ececec;
+	background-color: #ececec !important;
 }
