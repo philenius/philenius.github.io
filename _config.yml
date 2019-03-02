@@ -31,6 +31,7 @@ plugins:
   - jekyll-feed
 
 google_analytics: UA-80928743-3
+just_comments: 7f6ffdfb-9d73-46c8-a469-324327e2abca
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
