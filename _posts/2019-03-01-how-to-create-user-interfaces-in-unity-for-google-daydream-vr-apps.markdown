@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "How to create a UI in your Daydream app using the Google VR SDK for Unity"
+title:  "How to create user interfaces in Unity for Google Daydream VR apps"
 date:   2019-03-01 23:41:04 +0000
 categories: [virtual-reality]
-tags: [Google Daydream, Unity, VR]
+tags: [Google Daydream, Unity, VR, virtual reality]
 ---
 
 In the last two months, I've been experimenting with _Google Daydream View_ and I created a few demo applications in Unity. Throughout my experiments, I stumbled upon the difficulty to create user interfaces in VR. In this blog post, I'll describe how you can create UIs for your VR app build with the [Google VR SDK for Unity](https://github.com/googlevr/gvr-unity-sdk).
