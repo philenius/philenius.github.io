@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 $base-font-family: -apple-system, Roboto, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 a:hover {
-	color: #2a7ae2 !important;
+	color: #2a7ae2;
 }
 p {
 	color: #353535;
@@ -15,7 +15,6 @@ a.post-link:hover, a.site-title:hover {
 	color: #424242 !important;
 }
 a.post-link {
-	color: #424242 !important;
 }
 .site-header {
 	border-top-color: #424242 !important;
