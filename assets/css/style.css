@@ -5,20 +5,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 $base-font-family: -apple-system, Roboto, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 a:hover {
-	color: $brand-color;
+	color: #2a7ae2 !important;
 }
 p {
 	color: #353535;
 }
 a.post-link:hover, a.site-title:hover {
 	text-decoration: none !important;	
-	color: $grey-color-dark !important;
+	color: #424242 !important;
 }
 a.post-link {
-	color: $grey-color-dark !important;
+	color: #424242 !important;
 }
 .site-header {
-	border-top-color: $grey-color-dark !important;
+	border-top-color: #424242 !important;
 }
 code {
 	background-color: #ececec !important;
