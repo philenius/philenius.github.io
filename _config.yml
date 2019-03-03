@@ -14,11 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Adventures of a Software Engineer
-email: 
-description: >- # this means to ignore newlines until "baseurl:"
-  Hey, my name is Phil and I work as a Big Data Software Engineer. 
-  On this blog, I want to share with you my solutions to problems
-  that I come across on my daily work.
+#email:
+description: Blog about Big Data and DevOps
+long_description: >- # this means to ignore newlines until "baseurl:"
+  Hey, my name is Phil. Although I work as a Big Data Software Engineer,
+  I do a lot of DevOps stuff. Other topics, which will be covered on this blog,
+  are Chat Bots, VR, and Blockchain.<br>Have you ever tried
+  to setup a Hadoop cluster with SSL/TLS? Protip: don't do it! Sometimes, you're
+  stuck on certain problems for hours or even days. And there isn't always a
+  solution on StackOverflow or even on the whole internet. But in the end, you
+  always gotta find a way to fix that problem. This is why I want to share with
+  you my solutions to things that I come across on my daily work. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://philenius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username:

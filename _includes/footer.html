@@ -4,13 +4,13 @@
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="footer-col">
         <ul class="contact-list">
           <li class="p-name">
             {%- if site.author -%}
               {{ site.author | escape }}
             {%- else -%}
-              {{ site.title | escape }}
+              {%- if site.github_username -%}<a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> <span class="username">{{ site.github_username| escape }}</span></a>{%- endif -%}&ensp;|&ensp;{{ site.title | escape }}
             {%- endif -%}
             </li>
             {%- if site.email -%}
@@ -18,13 +18,10 @@
             {%- endif -%}
         </ul>
       </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+    </div>
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p>{{- site.long_description -}}</p>
       </div>
     </div>
 
