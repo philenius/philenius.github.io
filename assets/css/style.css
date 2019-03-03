@@ -4,6 +4,9 @@
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 $base-font-family: -apple-system, Roboto, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+h1.site-title {
+	margin-bottom: 0;
+}
 p {
 	color: #353535;
 }
