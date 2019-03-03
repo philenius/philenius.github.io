@@ -14,9 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Adventures of a Software Engineer
+description: Blog about Big Data and DevOps 
 #email:
-description: Blog about Big Data and DevOps
-long_description: >- # this means to ignore newlines until "baseurl:"
+meta_description: >-
+  Hey, my name is Phil. Although I work as a Big Data Software Engineer,
+  I do a lot of DevOps stuff. Other topics, which will be covered on this blog,
+  are Chat Bots, VR, and Blockchain.
+long_description: >-
   Hey, my name is Phil. Although I work as a Big Data Software Engineer,
   I do a lot of DevOps stuff. Other topics, which will be covered on this blog,
   are Chat Bots, VR, and Blockchain.<br>Have you ever tried
