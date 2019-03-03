@@ -7,6 +7,9 @@ $base-font-family: -apple-system, Roboto, BlinkMacSystemFont, "Segoe UI", Helvet
 p {
 	color: #353535;
 }
+a {
+	color: #1455a4 !important;
+}
 a:hover {
 	color: #2a7ae2 !important;	
 }
