@@ -3,7 +3,6 @@
 ## Notes
 
 ```bash
-docker run -it --entrypoint /bin/bash -p 4000:4000 -v `pwd`:/blog ruby
 docker run \
     -it --entrypoint /bin/bash \
     -p 4000:4000 \
