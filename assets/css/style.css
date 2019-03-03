@@ -13,6 +13,10 @@ a {
 a:hover {
 	color: #2a7ae2 !important;	
 }
+a.site-title {
+	color: #424242 !important;
+	font-weight: 100 !important;
+}
 a.site-title:hover {
 	text-decoration: none !important;	
 	color: #424242 !important;
@@ -26,4 +30,8 @@ a.post-link:hover {
 }
 code {
 	background-color: #ececec !important;
+}
+.post-meta, .footer-col-wrapper {
+	color: #575757 !important;
+	font-weight: 300 !important;
 }
