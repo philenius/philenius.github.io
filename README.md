@@ -4,9 +4,13 @@
 
 ```bash
 docker run -it --entrypoint /bin/bash -p 4000:4000 -v `pwd`:/blog ruby
-cd /blog
-gem install bundler jekyll
-bundle install
-bundle exec jekyll serve --host 0.0.0.0
-JEKYLL_ENV=production bundle exec jekyll build
+docker run \
+    -it --entrypoint /bin/bash \
+    -p 4000:4000 \
+    -v `pwd`:/srv/jekyll \
+    jekyll/jekyll:3.8
+jekyll build
+jekyll serve --host 0.0.0.0
+# for production
+JEKYLL_ENV=production jekyll build
 ```
