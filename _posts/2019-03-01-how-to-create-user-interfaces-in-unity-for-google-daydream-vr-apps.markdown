@@ -46,4 +46,4 @@ Now, to create a user interface follow these steps:
 
 6. Select the main camera and add the script `GvrPointerPhysicsRaycaster`.
 
-7. Now, you can add a button or any other UI control to your canvas. The player can automatically interact with the UI elements through its controller.
+7. Now, you can add a button or any other UI control to your canvas. The player can automatically interact with the UI elements with the Daydream controller.
