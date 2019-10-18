@@ -38,3 +38,12 @@ code {
 	color: #575757 !important;
 	font-weight: 300 !important;
 }
+
+.center-image {
+    margin: 1rem auto;
+    display: block;
+}
+
+.image-margin {
+	margin: 1rem 0rem;
+}
