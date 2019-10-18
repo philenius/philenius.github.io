@@ -32,7 +32,7 @@ In this blog post, I will briefly share my experiences with the file sync over U
     ![](/assets/2019-10-18/reMarkableWebUiScreenshot.png){: .center-image }
 
 5. You can now download and upload PDF and EPUB files:
-    <video width="100%" src="/assets/2019-10-18/screencaptureUploadDownload.mp4" loop autoplay></video>
+    <video width="100%" src="/assets/2019-10-18/screencaptureUploadDownload.mp4" loop autoplay controls></video>
 
 # Observations
 
