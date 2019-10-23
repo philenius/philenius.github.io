@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="426px" preserveAspectRatio="none" style="width:709px;height:426px;" version="1.1" viewBox="0 0 709 426" width="709px" zoomAndPan="magnify"><defs><filter height="300%" id="f1q0u3n547e0pe" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[979da56a7f83e2393dc758167ae295d0]
+cluster Server--><polygon fill="#FFFFFF" filter="url(#f1q0u3n547e0pe)" points="94,58.5,104,48.5,687,48.5,687,404,677,414,94,414,94,58.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="677" x2="686" y1="58.5" y2="49.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="94" x2="677" y1="58.5" y2="58.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="677" x2="677" y1="58.5" y2="414"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="360" y="74.4951">Server</text><!--MD5=[b1a0689b0b9f76cbba0e9f90884caf3a]
+cluster Docker Daemon--><polygon fill="#FFFFFF" filter="url(#f1q0u3n547e0pe)" points="118,106.5,128,96.5,663,96.5,663,380,653,390,118,390,118,106.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="653" x2="662" y1="106.5" y2="97.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="118" x2="653" y1="106.5" y2="106.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="653" x2="653" y1="106.5" y2="390"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="125" x="324" y="122.4951">Docker Daemon</text><!--MD5=[0ba5ee7700168656dc1b457c6fe9fdac]
+entity Client--><ellipse cx="58" cy="152" fill="#FEFECE" filter="url(#f1q0u3n547e0pe)" rx="8" ry="8" style="stroke: #A80036; stroke-width: 2.0;"/><path d="M58,160 L58,187 M45,168 L71,168 M58,187 L45,202 M58,187 L71,202 " fill="none" filter="url(#f1q0u3n547e0pe)" style="stroke: #A80036; stroke-width: 2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="39" x="38.5" y="221.9951">Client</text><!--MD5=[52bb74e2ef528211db78d89d6acc3642]
+entity NGINX--><polygon fill="#FEFECE" filter="url(#f1q0u3n547e0pe)" points="301.5,170.5,311.5,160.5,384.5,160.5,384.5,196.7969,374.5,206.7969,301.5,206.7969,301.5,170.5" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="374.5" x2="383.5" y1="170.5" y2="161.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="301.5" x2="374.5" y1="170.5" y2="170.5"/><line style="stroke: #000000; stroke-width: 1.5;" x1="374.5" x2="374.5" y1="170.5" y2="206.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="43" x="316.5" y="193.4951">NGINX</text><!--MD5=[139eb3675d8d2079d38b14966bddfcbb]
+entity App1--><polygon fill="#FEFECE" filter="url(#f1q0u3n547e0pe)" points="379,314,389,304,455,304,455,340.2969,445,350.2969,379,350.2969,379,314" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="445" x2="454" y1="314" y2="305"/><line style="stroke: #000000; stroke-width: 1.5;" x1="379" x2="445" y1="314" y2="314"/><line style="stroke: #000000; stroke-width: 1.5;" x1="445" x2="445" y1="314" y2="350.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="394" y="336.9951">App1</text><!--MD5=[15d2fd687f3b1a03431fe36778ee3e9d]
+entity App2--><polygon fill="#FEFECE" filter="url(#f1q0u3n547e0pe)" points="490,314,500,304,566,304,566,340.2969,556,350.2969,490,350.2969,490,314" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="556" x2="565" y1="314" y2="305"/><line style="stroke: #000000; stroke-width: 1.5;" x1="490" x2="556" y1="314" y2="314"/><line style="stroke: #000000; stroke-width: 1.5;" x1="556" x2="556" y1="314" y2="350.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="36" x="505" y="336.9951">App2</text><!--MD5=[984116fe2a384559e7a0117dd77ee242]
+entity Nextcloud--><polygon fill="#FEFECE" filter="url(#f1q0u3n547e0pe)" points="234.5,314,244.5,304,343.5,304,343.5,340.2969,333.5,350.2969,234.5,350.2969,234.5,314" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="333.5" x2="342.5" y1="314" y2="305"/><line style="stroke: #000000; stroke-width: 1.5;" x1="234.5" x2="333.5" y1="314" y2="314"/><line style="stroke: #000000; stroke-width: 1.5;" x1="333.5" x2="333.5" y1="314" y2="350.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="69" x="249.5" y="336.9951">Nextcloud</text><!--MD5=[390c273b418d77808a1b2e7388bc1e9b]
+link NGINX to Nextcloud--><!--MD5=[390c273b418d77808a1b2e7388bc1e9b]
+link NGINX to Nextcloud--><path d="M325.904,206.666 C318.028,215.399 307.99,224.707 297,230.5 C244.603,258.122 203.838,209.429 166,255 C142.644,283.129 187.614,302.493 229.592,313.808 " fill="none" id="NGINX-&gt;Nextcloud-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="234.428,315.081,226.741,308.9239,229.5923,313.8096,224.7067,316.661,234.428,315.081" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="125" x="167" y="268.0669">cloud.example.com</text><!--MD5=[d83ccc2e9130cf7aff18f1f4e104365c]
+link NGINX to App1--><!--MD5=[d83ccc2e9130cf7aff18f1f4e104365c]
+link NGINX to App1--><path d="M335.426,206.67 C330.405,225.696 326.89,252.976 340,272 C345.668,280.224 352.362,274.987 361,280 C370.819,285.698 380.674,293.095 389.319,300.284 " fill="none" id="NGINX-&gt;App1-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="393.46,303.788,389.1734,294.9209,389.6431,300.5582,384.0058,301.0279,393.46,303.788" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="123" x="341" y="268.0669">app1.example.com</text><!--MD5=[42a97183736af9b300ceba4184a0f622]
+link NGINX to App2--><!--MD5=[42a97183736af9b300ceba4184a0f622]
+link NGINX to App2--><path d="M384.639,200.723 C412.469,212.901 448.82,231.494 476,255 C490.558,267.59 503.379,284.981 512.649,299.399 " fill="none" id="NGINX-&gt;App2-1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="515.409,303.77,513.9846,294.0247,512.7389,299.5427,507.2209,298.2969,515.409,303.77" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="123" x="492" y="268.0669">app2.example.com</text><!--MD5=[cac7c1a686f391e437c462811a8d053d]
+link Client to NGINX--><path d="M77.5892,183.5 C122.237,183.5 232.577,183.5 296.041,183.5 " fill="none" id="Client-&gt;NGINX" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="301.28,183.5,292.28,179.5,296.28,183.5,292.28,187.5,301.28,183.5" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="125" x="127" y="176.5669">cloud.example.com</text><!--MD5=[29106b1d4a7c1f687db5a942a9aa5561]
+@startuml
+together {
+    actor Client
+    node Server {
+        node "Docker Daemon" {
+            together {
+                node NGINX
+            }
+            together {
+                node "App1"
+                node "App2"
+                node Nextcloud
+            }
+        }
+    }
+}
+
+NGINX -[hidden]-> Nextcloud
+NGINX -[hidden]-> App1
+NGINX -[hidden]-> App2
+
+Client-> NGINX : cloud.example.com
+NGINX -> App1 : app1.example.com
+NGINX -> App2 : app2.example.com
+NGINX -> Nextcloud : cloud.example.com
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 10:02:15 UTC 2019)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.7.0_25-b15
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

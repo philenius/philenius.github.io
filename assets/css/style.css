@@ -47,3 +47,7 @@ code {
 .image-margin {
 	margin: 1rem 0rem;
 }
+
+.highlight {
+    background: #ececec !important;
+}
