@@ -26,7 +26,7 @@ s="p-author h-card" itemprop="name">{{ page.author }}</span></span>
   {%- endif -%}
 
   <hr>
-  <div class="just-comments" data-apikey="{{ site.just_comments }}"></div>
+  <div class="just-comments" data-disableseo="true" data-apikey="{{ site.just_comments }}"></div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
