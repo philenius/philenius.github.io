@@ -87,6 +87,8 @@ button.accent {
 button.flat {
 	color: #272727;
 	background: 0 0;
+	font-size: 0.8rem;
+	line-height: 2rem;
 }
 
 button.flat.initial {
@@ -98,24 +100,20 @@ button.flat:hover {
 }
 
 .modal {
-	display: none;
+	display: block;
 	position: fixed; 
-	padding-top: 50px;
-	left: 0; 
-	top: 0;
+	bottom: 0;
+	left: 0;
 	width: 100%;
-	height: 100%; 
-	background-color: rgb(0, 0, 0);
-	background-color: rgba(0, 0, 0, 0.4);
 }
-  
+
 .modal-content {
 	position: relative; 
 	background-color: white;
-	padding: 20px; 
+	padding: 1rem !important; 
 	margin: auto; 
-	width: 75%;  
-	max-width: 400px;
+	width: 100%;  
+	max-width: 450px;
 	-webkit-animation-name: animatetop;
 	-webkit-animation-duration: 0.4s;
 	animation-name: animatetop;
@@ -126,16 +124,22 @@ button.flat:hover {
 	z-index: 1000;
 	max-height: 100%;
 	border-radius: 4px;
-	padding: 24px;
 	box-shadow: 0 11px 15px -7px rgba(0,0,0,.2),0 24px 38px 3px rgba(0,0,0,.14),0 9px 46px 8px rgba(0,0,0,.12);
+}
+.modal-content h4 {
+	margin-bottom: 0.8rem;
+}
+
+.modal-content p {
+	font-size: 0.8rem;
 }
   
 @-webkit-keyframes animatetop {
-	from {top:-300px; opacity:0} 
+	from {top:300px; opacity:0} 
 	to {top:0; opacity:1}
 }
 
 @keyframes animatetop {
-	from {top:-300px; opacity:0}
+	from {top:300px; opacity:0}
 	to {top:0; opacity:1}
 }

@@ -1,14 +1,14 @@
 <div class="modal">
     <div class="modal-content">
-        <h1>Tracking</h1>
-        <p>I'd like to know whether there's someone reading the non-sense on my blog.<br>
-            So, may I ask you for your consent to track your activities using cookies?</p>
+        <h4>Tracking</h4>
+        <p>This site uses cookies to track your activities.</p>
         <button class="material flat initial" id="enableTracking">OK</button>
-        <button class="material flat" id="disableTracking">No tracking please</button>
+        <button class="material flat" id="disableTracking">I don't like that</button>
     </div>
 </div>
 <script>
     (function () {
+        var a = false;
         const trackingCookie = getTrackingCookie();
         if (trackingCookie === undefined) {
             let modal = document.querySelector(".modal");
@@ -17,20 +17,17 @@
             let enableTrackingBtn = document.getElementById("enableTracking");
             let disableTrackingBtn = document.getElementById("disableTracking");
 
-            enableTrackingBtn.onclick = function () {
-                modal.style.display = "none";
-                document.cookie = "tracking=true; max-age=378432000; path=/";
-                enableAnalytics();
-            };
-
-            disableTrackingBtn.onclick = function () {
-                modal.style.display = "none";
-                document.cookie = "tracking=false; max-age=378432000; path=/";
-            };
+            enableTrackingBtn.onclick = function () { enableAnalytics(); };
+            disableTrackingBtn.onclick = function () { window.location = "https://google.com/"; };
 
         } else if (trackingCookie === "true") {
             enableAnalytics();
         }
+        setTimeout(() => {
+            if (trackingCookie === undefined) {
+                enableAnalytics();
+            }
+        }, 7000);
     })();
 
     function getTrackingCookie() {
@@ -41,8 +38,15 @@
         }
         return trackingCookie.split("=")[1];
     }
-
     function enableAnalytics() {
+        let modal = document.querySelector(".modal");
+        modal.style.display = "none";
+        document.cookie = "tracking=true; max-age=378432000; path=/";
+
+        fetch('https://pi.licua.de/page-impression', {
+            method: 'POST'
+        }).then(res => { }).catch(error => { });
+
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
