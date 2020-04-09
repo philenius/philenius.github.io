@@ -29,8 +29,10 @@
   {"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"url":"{{ site.url }}{{ page.url }}","headline":"{{ page.title }}","datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.date | date_to_xmlschema }}","description":"{{ page.excerpt | strip_html | strip_newlines }}","@context":"http://schema.org"}</script>{% endif %}<!-- end custom SEO -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   {%- feed_meta -%}
+  {% comment %}
   {%- if jekyll.environment == 'production' and site.just_comments -%}
   <script async src="https://just-comments.com/w2.js"></script>
   {%- endif -%}
+  {% endcomment %}
 
 </head>
