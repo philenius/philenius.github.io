@@ -17,18 +17,11 @@ title: Adventures of a Software Engineer
 description: Blog about Big Data and DevOps 
 #email:
 meta_description: >-
-  Hey, my name is Phil. Although I work as a Big Data Software Engineer,
-  I do a lot of DevOps stuff. Other topics, which will be covered on this blog,
-  are Chat Bots, VR, and Blockchain.
+  Welcome to my blog. My name is Philipp and I'm studying machine learning at Aalen University in Germany.
+  Topics that will be covered on this blog include DevOps, chatbots, virtual reality, data science, machine learning, and blockchain.
 long_description: >-
-  Hey, my name is Phil. Although I work as a Big Data Software Engineer,
-  I do a lot of DevOps stuff. Other topics, which will be covered on this blog,
-  are Chat Bots, VR, and Blockchain.<br>Have you ever tried
-  to setup a Hadoop cluster with SSL/TLS? Protip: don't do it! Sometimes, you're
-  stuck on certain problems for hours or even days. And there isn't always a
-  solution on StackOverflow or even on the whole internet. But in the end, you
-  always gotta find a way to fix that problem. This is why I want to share with
-  you my solutions to things that I come across on my daily work. 
+  Welcome to my blog. My name is Philipp and I'm studying machine learning at Aalen University in Germany.
+  Topics that will be covered on this blog include DevOps, chatbots, virtual reality, data science, machine learning, and blockchain.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://philenius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username:
