@@ -1,33 +1,34 @@
 (function () {
     const trackingCookie = getTrackingCookie();
-    if (trackingCookie === undefined || trackingCookie === "false") {
-        document.cookie = "tracking=false; max-age=378432000; path=/";
-        showBanner(true);
-        let enableTrackingBtn = document.getElementById("enableTracking");
-        let disableTrackingBtn = document.getElementById("disableTracking");
-
-        enableTrackingBtn.onclick = function () { document.cookie = "tracking=true; max-age=378432000; path=/"; showBanner(false); };
-        disableTrackingBtn.onclick = function () { window.location = "https://google.com/"; };
-    } else if (trackingCookie === "true") {
+    if (trackingCookie === 'true') {
         showBanner(false);
+        enableAnalytics();
+    } else if (trackingCookie === undefined) {
+        showBanner(true);
+        let enableTrackingBtn = document.getElementById('enableTracking');
+        let disableTrackingBtn = document.getElementById('disableTracking');
+        enableTrackingBtn.onclick = () => { enableAnalytics(); };
+        disableTrackingBtn.onclick = () => { showBanner(false); document.cookie = 'tracking=false; max-age=86400; path=/'; };
     }
-    enableAnalytics();
 })();
 function showBanner(enabled) {
-    document.querySelector(".modal").style.display = enabled ? "block" : "none";
+    document.querySelector('.modal').style.display = enabled ? 'block' : 'none';
 }
 function getTrackingCookie() {
-    let cookieArray = document.cookie.split(";");
-    const trackingCookie = cookieArray.find(c => c.trim().startsWith("tracking="));
+    let cookieArray = document.cookie.split(';');
+    const trackingCookie = cookieArray.find(c => c.trim().startsWith('tracking='));
     if (trackingCookie === undefined) {
         return undefined;
     }
-    return trackingCookie.split("=")[1];
+    return trackingCookie.split('=')[1];
 }
 function enableAnalytics() {
+    document.cookie = 'tracking=true; max-age=378432000; path=/';
+    showBanner(false);
+
     fetch('https://pi.licua.de/page-impression', {
         method: 'POST'
-    }).then(res => { }).catch(error => { });
+    }).then(_ => { }).catch(_ => { });
 
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
