@@ -11,6 +11,7 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
+  <meta name="google-site-verification" content="PrLKL6WSJegpgrblPbXHO6TVC999lO7GDfSVrmPUL3A" />
   <script type="application/ld+json">
   {"@type":"WebSite","url":"{{ site.url }}","headline":"{{ site.title }}","name":"{{ site.title }}","description":"{{ site.meta_description }}","@context":"http://schema.org"}</script>
 {% else %}
@@ -25,7 +26,6 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:type" content="article" />
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
-  <meta name="google-site-verification" content="PrLKL6WSJegpgrblPbXHO6TVC999lO7GDfSVrmPUL3A" />
   <script type="application/ld+json">
   {"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"url":"{{ site.url }}{{ page.url }}","headline":"{{ page.title }}","datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{{ page.date | date_to_xmlschema }}","description":"{{ page.excerpt | strip_html | strip_newlines }}","@context":"http://schema.org"}</script>{% endif %}<!-- end custom SEO -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
