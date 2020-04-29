@@ -33,6 +33,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-minifier
+  - jekyll-sitemap
 timezone: Europe/Berlin
 
 google_analytics: UA-80928743-3
