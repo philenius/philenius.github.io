@@ -34,6 +34,11 @@ a.post-link:hover {
 code {
 	background-color: #ececec !important;
 }
+
+div.highlighter-rouge {
+	margin-top: 1rem;
+}
+
 .post-meta, .footer-col-wrapper {
 	color: #575757 !important;
 	font-weight: 300 !important;
