@@ -148,3 +148,9 @@ button.flat:hover {
 	from {top:300px; opacity:0}
 	to {top:0; opacity:1}
 }
+
+#end-of-post {
+	color: #e8e8e8;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
