@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Adventures of a Software Engineer
-description: Blog about Big Data and DevOps 
+title: Developer Blog
+description: Blog about Big Data, DevOps, and Machine Learning 
 #email:
 meta_description: >-
   Welcome to my blog. My name is Philipp and I'm studying machine learning at Aalen University in Germany.
