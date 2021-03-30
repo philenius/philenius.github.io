@@ -10,6 +10,8 @@
         enableTrackingBtn.onclick = () => { enableAnalytics(); };
         disableTrackingBtn.onclick = () => { showBanner(false); document.cookie = 'tracking=false; max-age=86400; path=/'; };
     }
+
+    new SimpleLightbox('a.img', {});
 })();
 function showBanner(enabled) {
     document.querySelector('.modal').style.display = enabled ? 'block' : 'none';
@@ -31,8 +33,8 @@ function enableAnalytics() {
     }).then(_ => { }).catch(_ => { });
 
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'UA-80928743-3');
 }

@@ -15,26 +15,36 @@ In general, you can differentiate between two different kinds of user interfaces
 ### Non-diegetic
 Non-diegetic UIs are typically used to display the player's health or score. This kind of UI is often referred to as HUD (Heads Up Display). The UI sticks to the user's view by following the head movement of the user.
 
-![](/assets/2019-03-01_nonDiegeticUserInterfaceVirtualRealityDaydream.gif)
+<a class="img" href="/assets/2019-03-01/nonDiegeticUserInterfaceVirtualRealityDaydream.gif">
+  ![](/assets/2019-03-01/nonDiegeticUserInterfaceVirtualRealityDaydream.gif)
+</a>
 
 ### Spatial UI
 Spatial UIs are user interfaces that are placed somewhere in the 3D environment of your scene. They stick to a certain position in the world so that the user has to move its head in order to see it.
 
-![](/assets/2019-03-01_spatialUserInterfaceVirtualRealityDaydream.gif)
+<a class="img" href="/assets/2019-03-01/spatialUserInterfaceVirtualRealityDaydream.gif">
+  ![](/assets/2019-03-01/spatialUserInterfaceVirtualRealityDaydream.gif)
+</a>
 
 ## Steps for creating a user interface
 
 At this point, I assume that you have already setup a scene in Unity that contains all game objects required for Daydream.
 
-![](/assets/2019-03-01_unityBasicSetupDaydreamScene.png)
+<a class="img" href="/assets/2019-03-01/unityBasicSetupDaydreamScene.png">
+  ![](/assets/2019-03-01/unityBasicSetupDaydreamScene.png)
+</a>
 
 Now, to create a user interface follow these steps:
 
 1. Add a canvas to the hierarchy of game objects.
    * If you want to create a non-diegetic UI, then add the canvas as a child of your main camera like so:  
-     ![](/assets/2019-03-01_unitySceneHierarchyNonDiegeticUI.png)
+     <a class="img" href="/assets/2019-03-01/unitySceneHierarchyNonDiegeticUI.png">
+      ![](/assets/2019-03-01/unitySceneHierarchyNonDiegeticUI.png)
+     </a>
    * If you want to create a spatial UI, then place the canvas as a sibling to the player's game object like so:  
-     ![](/assets/2019-03-01_unitySceneHierarchySpatialUI.png)
+     <a class="img" href="/assets/2019-03-01/unitySceneHierarchySpatialUI.png">
+      ![](/assets/2019-03-01/unitySceneHierarchySpatialUI.png)
+     </a>
 
 2. Select the canvas and set the `Render Mode` in the inspector tab to `World Space`.
 

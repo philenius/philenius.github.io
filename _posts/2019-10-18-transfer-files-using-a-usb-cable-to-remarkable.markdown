@@ -8,7 +8,9 @@ tags: [e-ink, table, digital notepad, file transfer, sync, reMarkable]
 
 I decided to try out a so called _digital notepad_ for university so that I can take notes on my lecture manuscripts. I ended up buying the [reMarkable](https://remarkable.com/) because it seemed to be the most complete concept (there are a lot of hacks available on Github to fix some of the _reMarkable_'s flaws).
 
-![reMarkable Note](/assets/2019-10-18/reMarkableNote.jpg)
+<a class="img" href="/assets/2019-10-18/reMarkableNote.jpg">
+    ![reMarkable Note](/assets/2019-10-18/reMarkableNote.jpg)
+</a>
 
 One flaw of the _reMarkable_ is the file synchronization between your computer and the _reMarkable_. You cannot connect your _reMarkable_ to Dropbox, Google Drive, OneDrive, ownCloud, Nextcloud, etc. There are only two ways to sync your files:
 
@@ -23,13 +25,19 @@ In this blog post, I will briefly share my experiences with the file sync over U
 1. Turn on your _reMarkable_.
 
 2. Go to the device settings, select the tab `Storage` and make sure that `Enable USB web interface (Beta)` is turned on:
-    ![](/assets/2019-10-18/reMarkableEnableWebInterface.jpg){: .image-margin }
+    <a class="img" href="/assets/2019-10-18/reMarkableEnableWebInterface.jpg">
+        ![](/assets/2019-10-18/reMarkableEnableWebInterface.jpg){: .image-margin }
+    </a>
 
 3. Connect your _reMarkable_ to your computer using the micro USB cable.
-    ![](/assets/2019-10-18/gretaMeme.jpg){: .center-image }
+    <a class="img" href="/assets/2019-10-18/gretaMeme.jpg">
+        ![](/assets/2019-10-18/gretaMeme.jpg){: .center-image }
+    </a>
 
 4. Open your favourite browser and navigate to `http://10.11.99.1/`:
-    ![](/assets/2019-10-18/reMarkableWebUiScreenshot.png){: .center-image }
+    <a class="img" href="/assets/2019-10-18/reMarkableWebUiScreenshot.png">
+        ![](/assets/2019-10-18/reMarkableWebUiScreenshot.png){: .center-image }
+    </a>
 
 5. You can now download and upload PDF and EPUB files:
     <video width="100%" src="/assets/2019-10-18/screencaptureUploadDownload.mp4" loop autoplay controls></video>

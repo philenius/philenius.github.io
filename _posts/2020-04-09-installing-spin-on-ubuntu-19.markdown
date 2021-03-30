@@ -8,7 +8,9 @@ tags: [spin, ispin, model checker, software quality, verification]
 
 For the lecture _Advanced Software Quality_ at Aalen University, I had to demonstrate the usage of Spin model checker for the verification of software models. iSpin represents a graphical interface for editing and executing models and for analyzing the results. iSpin invokes Spin commands in the background and graphically presents the results.
 
-![](/assets/2020-04-09/ispin.png)
+<a class="img" href="/assets/2020-04-09/ispin.png">
+   ![](/assets/2020-04-09/ispin.png)
+</a>
 
 Following these steps, I managed to run Spin model checker on Ubuntu:
 

@@ -53,7 +53,9 @@ volumes:
 
 Now, suppose we want to add a reverse proxy like NGINX in front of Nextcloud because we might want to run several applications behind different subdomains on our server. Furthermore, we want to secure our connection to Nextcloud through TLS because we don't want that all our private data is transfered in plaintext over the internet:
 
-![PlantUML diagram denoting the scenario with Docker](/assets/2019-10-23/plantumlScenario.svg)
+<a class="img" href="/assets/2019-10-23/plantumlScenario.png">
+  ![PlantUML diagram denoting the scenario with Docker](/assets/2019-10-23/plantumlScenario.png)
+</a>
 
 <!--
 ```plantuml

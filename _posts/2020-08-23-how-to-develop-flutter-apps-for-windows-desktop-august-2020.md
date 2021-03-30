@@ -87,7 +87,9 @@ Without further ado, let's get started:
 
 9. [Download and install Visual Studio](https://visualstudio.microsoft.com/downloads/) (the _Community_ edition is free to use). **Important:** as in the output of `flutter doctor` denoted, please install the _Desktop development with C++_ workload, including all of its default components. 
 
-    ![](/assets/2020-08-23/visualStudioInstallationWizard.png)
+    <a class="img" href="/assets/2020-08-23/visualStudioInstallationWizard.png">
+        ![](/assets/2020-08-23/visualStudioInstallationWizard.png)
+    </a>
 
 10. If you re-run `flutter doctor`, then there should be only two issues remaining:
     ```bash
@@ -132,7 +134,10 @@ Without further ado, let's get started:
     ```
 
 12. Congratulation, you successfully created your first Flutter app for Windows desktop!!! You should see the Flutter demo app:
-![](/assets/2020-08-23/flutterDemoApp.png)
+
+<a class="img" href="/assets/2020-08-23/flutterDemoApp.png">
+    ![](/assets/2020-08-23/flutterDemoApp.png)
+</a>
 
 <div style="height: 2rem"></div>
 
