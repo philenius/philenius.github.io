@@ -154,3 +154,23 @@ button.flat:hover {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 }
+
+p.file-name {
+	background-color: #ececec;
+	border-bottom: solid #9e9e9e 2px;
+	display: inline;
+	margin-bottom: 0;
+	padding-left: 1rem;
+	padding-right: 3rem;
+	padding-top: 0.3rem;
+	padding-bottom: 0.1rem;
+	user-select: none;
+}
+
+p.file-name + div.highlighter-rouge {
+	margin-top: 0;
+}
+
+p.file-name + div.highlighter-rouge > div.highlight > pre.highlight {
+	border-top-left-radius: 0;
+}
