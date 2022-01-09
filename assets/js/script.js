@@ -11,7 +11,7 @@
         disableTrackingBtn.onclick = () => { showBanner(false); document.cookie = 'tracking=false; max-age=86400; path=/'; };
     }
 
-    new SimpleLightbox('a.img', {});
+    new SimpleLightbox('a.img', { captionsData: 'alt', captionPosition: 'outside' });
 })();
 function showBanner(enabled) {
     document.querySelector('.modal').style.display = enabled ? 'block' : 'none';
