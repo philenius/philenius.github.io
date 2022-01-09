@@ -28,10 +28,6 @@ function enableAnalytics() {
     document.cookie = 'tracking=true; max-age=378432000; path=/';
     showBanner(false);
 
-    fetch('https://pi.licua.de/page-impression', {
-        method: 'POST'
-    }).then(_ => { }).catch(_ => { });
-
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());

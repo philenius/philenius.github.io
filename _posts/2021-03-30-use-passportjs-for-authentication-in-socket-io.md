@@ -244,6 +244,7 @@ For this purpose, let's define a dummy user service in `user-service.js` which c
 
 <p class="file-name">user-service.js</p>
 
+{% raw %}
 ```javascript
 'use strict';
 
@@ -264,6 +265,7 @@ const users = [
     },
 ];
 ```
+{% endraw %}
 
 Finally, register Passport as a middleware for Socket.IO. Because middlewares in Socket.IO have a different function signature than those in Express, we have to define a wrapper function:
 
