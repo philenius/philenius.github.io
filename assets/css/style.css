@@ -31,8 +31,30 @@ a.post-link:hover {
 .site-header {
 	border-top-color: #424242 !important;
 }
-code {
+pre, code {
 	background-color: #ececec !important;
+	border: none !important;
+}
+figure.highlight pre {
+	padding: 4px 6px 0px 6px;
+	margin-bottom: 0;
+}
+table.rouge-table {
+	border: none;
+	margin-bottom: 0;
+}
+table.rouge-table td.gutter.gl, table.rouge-table td.code {
+	border: none;
+	padding: 0;
+}
+table.rouge-table td.gutter.gl pre {
+	color: #6e7781;
+	font-size: 12px;
+	text-align: end;
+	user-select: none;
+}
+table.rouge-table td.code pre {
+	font-size: 12px;
 }
 
 div.highlighter-rouge {
