@@ -33,4 +33,11 @@ function enableAnalytics() {
     gtag('js', new Date());
 
     gtag('config', 'UA-80928743-3');
+
+    const trackingScript = document.createElement("script");
+    trackingScript.src = "https://tracking.philenius.de/public/aurora.js";
+    trackingScript.setAttribute("async", "");
+    trackingScript.setAttribute("defer", "");
+    trackingScript.setAttribute("aurora-id", "cdb0c7992879af3eda024496de64f18b");
+    document.getElementsByTagName("body")[0].appendChild(trackingScript);
 }
