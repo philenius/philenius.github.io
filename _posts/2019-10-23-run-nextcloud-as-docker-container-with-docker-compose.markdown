@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Run Nextcloud as Docker container with Docker Compose"
-date:   2019-10-23 23:00:00 +0200
+title:  "Run Nextcloud as Docker container with Docker Compose (updated in Nov 2022)"
+date:   2022-11-13 12:00:00 +0100
 categories: [cloud]
-tags: [nextcloud, docker, docker compose]
+tags: [nextcloud, docker, docker compose, nginx]
 ---
 
 I've set up my private cloud using [Nextcloud](https://nextcloud.com/). Because I'm a huge fan of
@@ -11,18 +11,22 @@ Docker, I decided to run Nextcloud as a Docker container. Luckily, there's an of
 [Docker image](https://hub.docker.com/_/nextcloud) and they also provide examples on how
 to run Nextcloud with a standalone database using Docker Compose.
 
-## Basic setup
+**_Updated in November 2022 to include the latest Docker images_**
+
+---
+
+## a) Basic setup
 
 The basic setup without subdomain, without TLS and without a reverse proxy is super easy. The corresponding `docker-compose.yml` looks like this:
 
 ```yaml
 ---
-version: '3'
+version: "3"
 services:
   nextcloud:
-    image: "nextcloud:17.0.0-apache"
+    image: "nextcloud:25.0.1-apache"
     ports:
-      - 8080:80
+      - "8080:80"
     restart: always
     volumes:
       - nextcloud:/var/www/html
@@ -34,7 +38,7 @@ services:
       - NEXTCLOUD_ADMIN_USER=<NEXTCLOUD_ADMIN_USER>
       - NEXTCLOUD_ADMIN_PASSWORD=<NEXTCLOUD_ADMIN_PASSWORD>
   mariadb:
-    image: "mariadb:10.4.8-bionic"
+    image: "mariadb:10.9.4-jammy"
     command: "--transaction-isolation=READ-COMMITTED --binlog-format=ROW"
     restart: always
     volumes:
@@ -49,9 +53,23 @@ volumes:
   db:
 ```
 
-## Advanced setup
+You can then start your Nextcloud setup using the following shell command:
 
-Now, suppose we want to add a reverse proxy like NGINX in front of Nextcloud because we might want to run several applications behind different subdomains on our server. Furthermore, we want to secure our connection to Nextcloud through TLS because we don't want that all our private data is transfered in plaintext over the internet:
+```bash
+docker-compose up -d
+```
+
+Use the following command to see a continuous log stream of your Nextcloud and MariaDB Docker contains on stdout. You can press `Ctrl + C` at any time to stop the log output (this will not shutdown your Nextcloud container):
+
+```bash
+docker-compose logs -f
+```
+
+---
+
+## b) Advanced setup
+
+Now, suppose we want to add a reverse proxy like NGINX in front of Nextcloud because we might want to run several applications behind different subdomains on our server. Furthermore, we want to secure our connection to Nextcloud through TLS because we don't want that all our private data is transfered unencrypted over the internet:
 
 <a class="img" href="/assets/2019-10-23/plantumlScenario.png">
   ![PlantUML diagram denoting the scenario with Docker](/assets/2019-10-23/plantumlScenario.png)
@@ -92,21 +110,20 @@ NGINX -> Nextcloud : cloud.example.com
 
 To realize this scenario, we need to make these changes:
 
-* The Docker containers of NGINX and Nextcloud (+ MariaDB) need to run on the same Docker network so that NGINX can proxy traffic to Nextcloud. I suppose that you already have a running NGINX with TLS setup ([read this for a how-to](https://medium.com/@pentacent/nginx-and-lets-encrypt-wit
-h-docker-in-less-than-5-minutes-b4b8a60d3a71)). **Make sure to use the appropriate network name!** When using Docker Compose, the network name is a concatenation of the directory name (where the `docker-compose.yml` is stored) + the name of the NGINX container + `network` (each part separated by hyphens). In my case the NGINX is running inside a Docker network called `apps_nginx_network`.
+* The Docker containers of NGINX and Nextcloud (+ MariaDB) need to run on the same Docker network so that NGINX can proxy traffic to Nextcloud. I assume that you already have a running NGINX with TLS setup ([read this for a how-to](https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71)). **Make sure to use the appropriate network name!** When using Docker Compose, the network name is a concatenation of the directory name (where the `docker-compose.yml` is stored) + the name of the NGINX container + `network` (each part separated by hyphens). In my case the NGINX is running inside a Docker network called `apps_nginx_network`.
 
-* Now that the Docker containers of NGINX and Nextcloud run inside the same network, there's no need to expose the port of Nextcloud (→ remove port mapping).
+* Since the Docker containers of NGINX and Nextcloud are now running on the same network, it is not necessary to expose the port of Nextcloud. For this reason, compared to the basic setup described above, the port exposure (`ports: - "8080:80"`) can be omitted.
 
-* For reasons of security, Nextcloud prints an error message when it is run on a subdomain. This is why we set the environment variable `NEXTCLOUD_TRUSTED_DOMAINS` to our subdomain.
+* For security reasons, Nextcloud prints an error message when running on a subdomain. To fix this error, set the environment variable `NEXTCLOUD_TRUSTED_DOMAINS` to the fully-qualified domain name (FQDN) under which your Nextcloud instance will be served, in this case `cloud.example.com`.
 
-**Resulting configuration:**
+#### **Resulting configuration `docker-compose.yml`:**
 
 ```yaml
 ---
-version: '3'
+version: "3"
 services:
   nextcloud:
-    image: "nextcloud:17.0.0-apache"
+    image: "nextcloud:25.0.1-apache"
     restart: always
     volumes:
       - nextcloud:/var/www/html
@@ -121,7 +138,7 @@ services:
     networks:
       - <NAME_OF_NGINX_DOCKER_NETWORK>
   mariadb:
-    image: "mariadb:10.4.8-bionic"
+    image: "mariadb:10.9.4-jammy"
     command: "--transaction-isolation=READ-COMMITTED --binlog-format=ROW"
     restart: always
     volumes:
@@ -141,7 +158,15 @@ networks:
     external: true  
 ```
 
-**Forward traffic from NGINX to Nextcloud:**
+After updating your `docker-compose.yml`, you can restart Nextcloud so that the changes take effect:
+
+```bash
+docker-compose down
+docker-compose up -d
+```
+
+
+#### **Forward traffic from NGINX to Nextcloud:**
 
 Because NGINX and Nextcloud run inside the same Docker network, they can ping / reach eachother through their container names (= their hostnames). That means, in this example the NGINX container can forward traffic to Nextcloud through `http://nextcloud:80`.
 
