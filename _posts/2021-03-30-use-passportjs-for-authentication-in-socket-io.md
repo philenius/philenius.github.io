@@ -2,7 +2,7 @@
 layout: post
 title:  "Usage of Passport JWT Strategy for Authentication in Socket.IO"
 date:   2021-03-31 12:00:00 +0000
-categories: [web development]
+categories: [web-development]
 tags: [Passport, Socket.IO, WebSocket, Authentication, JWT, Express, Node.js, JavaScript]
 read_time: 15
 ---

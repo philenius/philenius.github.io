@@ -93,7 +93,7 @@ page.hero_cta_url | default: hero_post.url | default: '#articles' %}
     {% for category in site.categories %} {% capture category_name %}{{ category
     | first }}{% endcapture %}
     <article>
-      <a class="text-link" href="/{{category_name | slugify}}/"
+      <a class="text-link" href="/categories/{{category_name | slugify}}/"
         ><h3>{{ category_name | capitalize }}</h3></a
       >
     </article>

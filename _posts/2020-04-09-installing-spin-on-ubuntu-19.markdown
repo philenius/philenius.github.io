@@ -2,7 +2,7 @@
 layout: post
 title:  "Installing Spin Model Checker including iSpin on Ubuntu 19.04"
 date:   2020-04-09 09:00:00 +0200
-categories: [software quality]
+categories: [software-quality]
 tags: [spin, ispin, model checker, software quality, verification]
 read_time: 1
 ---

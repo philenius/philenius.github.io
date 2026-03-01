@@ -6,20 +6,25 @@ layout: default
   <header>
     {% capture category_name %}{{ page.title | normalize_whitespace }}{%
     endcapture %}
-    <h1>{{ category_name | capitalize }}</h1>
+    <h1>{{ category_name }}</h1>
     <p>
       Here, you can explore the latest blog posts on the topic {{ category_name
       }}:
     </p>
   </header>
   <div class="post-overview__grid">
-    {% for post in page.posts %}
+    {% assign filtered_posts = site.posts | where_exp: "post", "post.categories
+    contains page.category" %} {% for post in filtered_posts %}
     <article>
       <span class="post-date">{{ post.date | date: '%b %d, %Y' }}</span>
       <h3>{{ post.title }}</h3>
       <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
       <a class="text-link" href="{{ post.url | relative_url }}">Read</a>
     </article>
-    {% endfor %}
+    {% endfor %} {% if filtered_posts == empty %}
+    <p style="text-align: center">
+      Oops, no posts found in this category. Please come back later.
+    </p>
+    {% endif %}
   </div>
 </section>

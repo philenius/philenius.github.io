@@ -34,7 +34,6 @@ author_avatar: assets/images/avatar.jpg
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-archives
   - jekyll-feed
   - jekyll-minifier
   - jekyll-sitemap
@@ -56,11 +55,3 @@ jekyll-minifier:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-jekyll-archives:
-  enabled:
-    - categories
-  layouts:
-    category: category
-  permalinks:
-    category: '/:name/'

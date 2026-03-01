@@ -2,7 +2,7 @@
 layout: post
 title:  "How to track Detectron2 experiments in MLflow"
 date:   2022-01-09 12:00:00 +0000
-categories: [machine learning]
+categories: [machine-learning]
 tags: [Detectron2, MLflow, Machine Learning, Deep Learning, ML lifecycle, record experiments, log artifacts metrics parameters]
 read_time: 15
 ---
