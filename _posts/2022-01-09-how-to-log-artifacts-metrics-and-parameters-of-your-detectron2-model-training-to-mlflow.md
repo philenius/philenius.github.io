@@ -247,6 +247,8 @@ trainer.train()
 Assuming that you have a train set, a val/dev set, **and a separate test set**, you might want to evaluate the trained model on your test and log the results to MLflow, too. Let's do this!
 
 ```python
+import logging
+
 from detectron2.data import build_detection_test_loader
 from detectron2.engine import DefaultPredictor
 from detectron2.evaluation import COCOEvaluator, inference_on_dataset
