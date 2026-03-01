@@ -4,6 +4,7 @@ title:  "How to track Detectron2 experiments in MLflow"
 date:   2022-01-09 12:00:00 +0000
 categories: [machine learning]
 tags: [Detectron2, MLflow, Machine Learning, Deep Learning, ML lifecycle, record experiments, log artifacts metrics parameters]
+read_time: 15
 ---
 
 In this blog post, I'll show you how to integrate MLflow into your ML lifecycle so that you can log artifacts, metrics, and parameters of your model trainings/experiments with Detectron2. As a result, you'll be able to log training parameters (`MODEL.WEIGHTS`, `OUTPUT_DIR`, `SOLVER.MAX_ITER`, etc), training metrics (AP, duration, loss, etc.), and training artifacts (such as the model itself, training log file, sample images with inference, evaluation results, etc.) to MLflow.
@@ -108,7 +109,7 @@ To line out the the next steps of this blog post, let's start with a blazing fas
 
 First, let's extend the Detectron2 configuration so that we can make the hook , which we'll implement in step 2, configurable and reusable. We'll add four configurations under the new configuration node `MLFLOW` to make experiment name, run name, run description, and tracking server URI configurable:
 
-{% highlight python linenos %}
+```python
 from detectron2.config import get_cfg, CfgNode
 
 cfg = get_cfg()
@@ -118,7 +119,7 @@ cfg.MLFLOW.EXPERIMENT_NAME = "Balloon Object Detection"
 cfg.MLFLOW.RUN_DESCRIPTION = "First training with 1000 iterations, 210 images in the train set... blabla"
 cfg.MLFLOW.RUN_NAME = "#0 first training"
 cfg.MLFLOW.TRACKING_URI = "http://localhost:5000"
-{% endhighlight %}
+```
 
 <div style="height: 2rem"></div>
 
@@ -135,7 +136,7 @@ Hooks in Detectron2 must be subclasses of `detectron2.engine.HookBase`. Each hoo
 
 Here's my code snippet for the MLflow hook which implements three of these four methods:
 
-{% highlight python linenos %}
+```python
 from detectron2.engine import HookBase
 import mlflow
 
@@ -169,7 +170,7 @@ class MLflowHook(HookBase):
             with open(os.path.join(self.cfg.OUTPUT_DIR, "model-config.yaml"), "w") as f:
                 f.write(self.cfg.dump())
             mlflow.log_artifacts(self.cfg.OUTPUT_DIR)
-{% endhighlight %}
+```
 
 Explanations:
 
@@ -185,7 +186,7 @@ Explanations:
 
 We could start training our model right away but per default the `DefaultTrainer` of Detectron2 doesn't evaluate the model on the validation/dev set. If we want to evaluate AR for object proposals or AP for instance detection/segmentation during training, then we'll have write a custom trainer class which extends `DefaultTrainer` like this:
 
-{% highlight python linenos %}
+```python
 class CocoTrainer(DefaultTrainer):
     """
     A custom trainer class that evaluates the model on the validation set every `_C.TEST.EVAL_PERIOD` iterations.
@@ -198,7 +199,7 @@ class CocoTrainer(DefaultTrainer):
                         exist_ok=True)
 
         return COCOEvaluator(dataset_name, distributed=False, output_dir=cfg.OUTPUT_DIR_VALIDATION_SET_EVALUATION)
-{% endhighlight %}
+```
 
 <div style="height: 2rem"></div>
 
@@ -209,7 +210,7 @@ Now we're ready to start training our model with Detectron2. In line 17 we confi
 
 **Please note:** The following code snippet assumes that you already went through the steps of registering your dataset (train set, val/dev set, and test set) in Detectron2's `DatasetCatalog` and `MetadataCatalog`. I skipped these steps section because they are specific to your use case / dataset. 
 
-{% highlight python linenos %}
+```python
 import os
 
 from detectron2.engine import DefaultTrainer
@@ -237,7 +238,7 @@ trainer = CocoTrainer(cfg)
 trainer.register_hooks(hooks=[mlflow_hook])
 trainer.resume_or_load(resume=False)
 trainer.train()
-{% endhighlight %}
+```
 
 <div style="height: 2rem"></div>
 
@@ -245,7 +246,7 @@ trainer.train()
 
 Assuming that you have a train set, a val/dev set, **and a separate test set**, you might want to evaluate the trained model on your test and log the results to MLflow, too. Let's do this!
 
-{% highlight python linenos %}
+```python
 from detectron2.data import build_detection_test_loader
 from detectron2.engine import DefaultPredictor
 from detectron2.evaluation import COCOEvaluator, inference_on_dataset
@@ -267,7 +268,7 @@ for k, v in evaluation_results["bbox"].items():
 
 mlflow.log_artifacts(cfg.OUTPUT_DIR_TEST_SET_EVALUATION, "test-set-evaluation")
 mlflow.log_text(str(evaluation_results), "test-set-evaluation/coco-metrics.txt")
-{% endhighlight %}
+```
 
 Explanations:
 

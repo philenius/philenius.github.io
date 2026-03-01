@@ -13,24 +13,28 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Developer Blog
-description: Blog about Big Data, DevOps, and Machine Learning 
-#email:
+title: philenius
+logo_emphasis: phil
+description: Blog about scalable cloud setups, ML life-cycle tooling, and modern app stacks.
 meta_description: >-
-  Welcome to my blog. My name is Philipp and I'm studying machine learning at Aalen University in Germany.
-  Topics that will be covered on this blog include DevOps, chatbots, virtual reality, data science, machine learning, and blockchain.
+  Hi there! I'm Phil - a software engineer who lives and breathes Python. After finishing my studies in machine learning, I've spent
+  the last few years building production-grade ML pipelines, experimenting with deep learning models for computer vision, and
+  architecting scalable cloud-native solutions.
 long_description: >-
-  Welcome to my blog. My name is Philipp and I'm studying machine learning at Aalen University in Germany.
-  Topics that will be covered on this blog include DevOps, chatbots, virtual reality, data science, machine learning, and blockchain.
+  Hi there! I'm Phil - a software engineer who lives and breathes Python. After finishing my studies in machine learning, I've spent
+  the last few years building production-grade ML pipelines, experimenting with deep learning models for computer vision, and
+  architecting scalable cloud-native solutions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://philenius.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username:
-github_username:  philenius
+author_github: philenius
+author_avatar: assets/images/avatar.jpg
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-archives
   - jekyll-feed
   - jekyll-minifier
   - jekyll-sitemap
@@ -52,3 +56,11 @@ jekyll-minifier:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: category
+  permalinks:
+    category: '/:name/'

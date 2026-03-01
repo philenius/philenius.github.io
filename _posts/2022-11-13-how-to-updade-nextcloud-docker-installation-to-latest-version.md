@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "How to Update Nextcloud Docker Installation to the Latest Version"
+subtitle: "A step-by-step guide to update your Nextcloud Docker installation to the latest version."
 date: 2022-11-13 12:00:00 +0000
 categories: [cloud]
 tags: [nextcloud, mariadb, maria, docker, docker compose, update, upgrade]
+read_time: 10
 ---
 
 The developers of Nextcloud typically release [three major releases per year](https://docs.nextcloud.com/server/latest/admin_manual/release_schedule.html). With this release frequency, your current Nextcloud installation will quickly become obsolete. Luckily, updating Nextcloud is super easy. In this blog post, I will briefly describe how to update a Docker or Docker Compose based Nextcloud installation.

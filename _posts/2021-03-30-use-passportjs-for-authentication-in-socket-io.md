@@ -4,6 +4,7 @@ title:  "Usage of Passport JWT Strategy for Authentication in Socket.IO"
 date:   2021-03-31 12:00:00 +0000
 categories: [web development]
 tags: [Passport, Socket.IO, WebSocket, Authentication, JWT, Express, Node.js, JavaScript]
+read_time: 15
 ---
 
 [Passport](http://www.passportjs.org/) is an authentication middleware for [Node.js](https://nodejs.org/) that provides dozens of pluggable authentication mechanisms. You might already have implemented a Node.js backend with [Express](https://expressjs.com/) (and Passport). And now you're wondering how you can protect the WebSocket communication between backend and frontend from unauthenticated access? Perhaps you don't want to implement authentication twice, but want to reuse your existing Passport authentication via JSON Web Tokens (or any other strategy e.g. basic auth)? Then, this blog post is meant for you!

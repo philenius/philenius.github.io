@@ -4,6 +4,7 @@ title:  "Run Nextcloud as Docker container with Docker Compose (updated in Nov 2
 date:   2022-11-13 12:00:00 +0100
 categories: [cloud]
 tags: [nextcloud, docker, docker compose, nginx]
+read_time: 10
 ---
 
 I've set up my private cloud using [Nextcloud](https://nextcloud.com/). Because I'm a huge fan of

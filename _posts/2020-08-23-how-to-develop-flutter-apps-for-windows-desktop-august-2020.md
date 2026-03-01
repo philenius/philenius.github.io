@@ -4,6 +4,7 @@ title:  "How to develop Flutter apps for Windows desktop (August 2020)"
 date:   2020-08-23 12:00:00 +0000
 categories: [app-development]
 tags: [Flutter, Dart, desktop, Windows]
+read_time: 10
 ---
 
 Flutter is an awesome framework for developing native cross-platform apps with a single code-base for Android, iOS, Windows, Linux, and macOS. In this blog post, I'll explain how to set up your computer for developing Flutter apps which you can run on Windows desktop.

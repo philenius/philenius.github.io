@@ -4,6 +4,7 @@ title:  "Installing Spin Model Checker including iSpin on Ubuntu 19.04"
 date:   2020-04-09 09:00:00 +0200
 categories: [software quality]
 tags: [spin, ispin, model checker, software quality, verification]
+read_time: 1
 ---
 
 For the lecture _Advanced Software Quality_ at Aalen University, I had to demonstrate the usage of Spin model checker for the verification of software models. iSpin represents a graphical interface for editing and executing models and for analyzing the results. iSpin invokes Spin commands in the background and graphically presents the results.

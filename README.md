@@ -10,7 +10,7 @@ docker run \
     -it --entrypoint /bin/bash \
     -p 4000:4000 \
     -v `pwd`:/srv/jekyll \
-    jekyll/jekyll:4.2.0
+    jekyll/jekyll:4
 
 jekyll build
 

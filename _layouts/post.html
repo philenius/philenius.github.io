@@ -1,32 +1,81 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="
-datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span clas
-s="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+<section class="hero">
+  <div class="hero__content">
+    <div class="hero__badges">
+      {% if page.tags %} {% for tag in page.tags limit: 3 %}
+      <span class="chip chip--accent">{{ tag }}</span>
+      {% endfor %} {% elsif primary_category %}
+      <span class="chip chip--accent">{{ primary_category }}</span>
+      {% endif %}
+    </div>
+    <p class="hero__meta">
+      {{ page.date | date: '%b %d, %Y' }} {% if page.read_time %} • {{
+      page.read_time }} min read{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="hero__subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="hero__ctas">
+      <a class="btn btn--primary" href="#article">Read article</a>
+      <button
+        class="btn btn--ghost"
+        data-share
+        data-share-title="{{ page.title }}"
+        {%
+        if
+        page.subtitle
+        %}data-share-text="{{ page.subtitle }}"
+        {%
+        endif
+        %}
+        data-share-url="{{ page.url | absolute_url }}"
+      >
+        Share
+      </button>
+    </div>
   </div>
+  <div class="hero__visual">
+    <div class="orb orb--one"></div>
+    <div class="orb orb--two"></div>
+    <div class="grid-lines"></div>
+  </div>
+</section>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+<article id="article" class="prose">
+  {% if page.lede %}
+  <p class="lede">{{ page.lede }}</p>
+  {% endif %} {{ content }}
+</article>
 
-  <hr id="end-of-post">
-
+<section id="comments" class="prose">
+  <h2>Comments</h2>
   <div id="remark42"></div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</section>
+
+<script>
+  var remark_config = {
+    host: "https://comments.philenius.de",
+    site_id: "github-blog",
+    components: ["embed"],
+    locale: "en",
+    show_email_subscription: false,
+  };
+</script>
+<script>
+  !(function (e, n) {
+    for (var o = 0; o < e.length; o++) {
+      var r = n.createElement("script"),
+        c = ".js",
+        d = n.head || n.body;
+      "noModule" in r ? ((r.type = "module"), (c = ".mjs")) : (r.async = !0),
+        (r.defer = !0),
+        (r.src = remark_config.host + "/web/" + e[o] + c),
+        d.appendChild(r);
+    }
+  })(remark_config.components || ["embed"], document);
+</script>

@@ -1,9 +1,11 @@
-<div class="modal">
-    <div class="modal-content">
-        <h4>Tracking</h4>
-        <p>This site uses cookies to track your activities.</p>
-        <button class="material flat initial" id="enableTracking">OK</button>
-        <button class="material flat" id="disableTracking">No, thanks</button>
+<div class="cookie-banner" data-cookie-banner hidden>
+    <div>
+        <p class="cookie-banner__title">Tracking</p>
+        <p class="cookie-banner__text">This site uses cookies to track your activities.</p>
+    </div>
+    <div class="cookie-banner__actions">
+        <button class="btn btn--ghost" data-cookie-reject>No, thanks</button>
+        <button class="btn btn--primary" data-cookie-accept>OK</button>
     </div>
 </div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80928743-3"></script>

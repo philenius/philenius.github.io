@@ -4,6 +4,7 @@ title:  "Nextcloud desktop client gets stuck on 'Account access' view / during l
 date:   2019-10-24 00:00:00 +0200
 categories: [cloud]
 tags: [nextcloud, docker, configuration]
+read_time: 5
 ---
 
 Having set up Nextcloud with Docker and secured over TLS, I wanted to connect my Netcloud desktop client. I was successfully able to login into Nextcloud in my browser. But somehow, the desktop client would always get stuck on the login page of Nextcloud.
