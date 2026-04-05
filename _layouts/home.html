@@ -37,7 +37,7 @@ page.hero_cta_url | default: hero_post.url | default: '#articles' %}
     <p class="hero__subtitle">{{ hero_subtitle }}</p>
     {% endif %}
     <div class="hero__ctas">
-      <a class="btn btn--primary" href="{{ hero_url }}">
+      <a class="btn btn--primary" href="{{ hero_url }}#article">
         {{ page.hero_cta_label | default: 'Read article' }}
       </a>
       <button
