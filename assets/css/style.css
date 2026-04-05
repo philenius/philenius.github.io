@@ -131,10 +131,12 @@ main {
 .hero {
   border-radius: var(--radius-xl);
   padding: clamp(32px, 8vw, 96px);
-  background: var(--gradient-brand);
+  background: linear-gradient(130deg, #2ed6a3, #5b8dff, #2ed6a3);
+  background-size: 200% 200%;
   color: #fff;
   position: relative;
   overflow: hidden;
+  animation: gradient-shift 8s ease infinite;
 }
 
 .hero__content {
@@ -151,6 +153,31 @@ main {
   margin-left: 50%;
 }
 
+@keyframes orb-drift-one {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  33%  { transform: translate3d(32px, -40px, 0) scale(1.08); }
+  66%  { transform: translate3d(-20px, 24px, 0) scale(0.94); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes orb-drift-two {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  40%  { transform: translate3d(-36px, 10px, 0) scale(1.1); }
+  70%  { transform: translate3d(24px, -10px, 0) scale(0.93); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .grid-lines {
   position: absolute;
   inset: 0;
@@ -161,6 +188,7 @@ main {
     linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
   background-size: 40px 40px;
   border-radius: var(--radius-xl);
+  animation: grid-drift 20s linear infinite;
 }
 
 .orb {
@@ -168,6 +196,7 @@ main {
   border-radius: 50%;
   filter: blur(0px);
   opacity: 0.6;
+  will-change: transform;
 }
 
 .orb--one {
@@ -176,14 +205,16 @@ main {
   background: rgba(46, 214, 163, 0.6);
   top: 30px;
   right: 60px;
+  animation: orb-drift-one 10s ease-in-out infinite;
 }
 
 .orb--two {
   width: 260px;
   height: 260px;
-  background: rgba(91, 141, 255, 0.5);
+  background: rgba(77, 118, 214, 0.5);
   bottom: -40px;
   left: 10px;
+  animation: orb-drift-two 15s ease-in-out infinite;
 }
 
 .hero__badges {
@@ -628,8 +659,20 @@ footer {
     background: rgba(14, 27, 42, 0.05);
   }
 
+  .hero__visual {
+    margin-left: 0;
+  }
+
   .hero__content {
     max-width: 100%;
+  }
+
+  .grid-lines {
+    display: none;
+  }
+
+  .orb--one, .orb--two {
+    display: none;
   }
 
   .author {
