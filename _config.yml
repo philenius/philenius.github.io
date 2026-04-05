@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: philenius
 logo_emphasis: phil
-description: Blog about scalable cloud setups, ML life-cycle tooling, and modern app stacks.
+description: A personal blog about machine learning, cloud infrastructure, and software engineering — or whatever I happen to stumble upon.
 meta_description: >-
   Hi there! I'm Phil - a software engineer who lives and breathes Python. After finishing my studies in machine learning, I've spent
   the last few years building production-grade ML pipelines, experimenting with deep learning models for computer vision, and
